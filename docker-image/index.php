@@ -1,15 +1,21 @@
+<?php
+	$cloud = 'AWS';
+
+	if (strpos($_ENV['HOST'], 'metapod')) {
+		$cloud = 'Metapod';
+	}
+?>
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.1//EN" "http://www.w3.org/TR/xhtml11/DTD/xhtml11.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en">
 
 <head>
-  <title>M.E.C. :: Miggins Employee Connection</title>
+  <title>Miggins <?=$cloud?> Container Website</title>
   <meta name="description" content="free website template" />
   <meta name="keywords" content="enter your keywords here" />
   <meta http-equiv="content-type" content="text/html; charset=utf-8" />
   <meta http-equiv="X-UA-Compatible" content="IE=9" />
   <link rel="stylesheet" type="text/css" href="style.css" />
   <script type="text/javascript" src="jquery.min.js"></script>
-  <script type="text/javascript" src="image_slide.js"></script>
 </head>
 
 <body>
@@ -17,13 +23,15 @@
     <div id="header">
 	  <div id="banner">
 	    <div id="welcome">
-	      <h1>Miggins Employee Connection</h1>
+	      <h1>Miggins.net</h1>
 	    </div><!--close welcome-->
 	    <div id="menubar">
           <ul id="menu">
             <li class="current"><a href="index.html"  >Home</a></li>
             <li><a href="time"  >Latest News</a></li>
             <li><a href="christmas"  >Seasonal</a></li>
+        <li><a href="http://mantl.io"  >Cisco MANTL</a></li>
+
           </ul>
         </div><!--close menubar-->	  
 	  </div><!--close banner-->	
@@ -32,16 +40,15 @@
 	<div id="site_content">		
 
       <div class="slideshow">  
-		<ul class="slideshow">
+      <ul class="slideshow">
           <li class="show"><img width="900" height="350" src="banner-1.jpg" alt="M.E.C. :: Miggins Employee Connection" /></li>
-          <li><img width="900" height="350" src="banner-2.jpg" alt="New branch open in Accrington Arndale Centre" /></li>
-        </ul> 
+      </ul>
       </div><!--close slideshow-->		
 	 
 	  <div id="content">
-        <div class="content_item">
+<!--        <div class="content_item">
 		  <h1>Miggins Container Test Page</h1>
-		  <p style="font-size: 1.2em;">Docker host: <?=$_ENV['HOST']?><br />Container ID: <?=$_ENV['HOSTNAME']?></p>
+		  <p style="font-size: 1.2em;">Cloud: <?=$cloud?><br />Container ID: <?=$_ENV['HOSTNAME']?></p>-->
 <!--		 <?php print_r($_ENV); print_r($_REQUEST); print_r($_SERVER); ?>-->
       </div><!--close content-->   
 	  
@@ -55,6 +62,15 @@
 		    <a style="color: red"   href="http://private.ukidcv.local/confidential.html">Piealicious</a>
 		  </div><!--close more-->      
 	    </div><!--close ourwork-->
+	    <div class="projects">
+	      <h3>Running on <?=$cloud?> (ID: <?=$_ENV['HOSTNAME']?>)</h3>
+		  <p><img style="float: right; padding-left: 1em; width: 50%;"src="logo.png" />
+		  Powered by Cisco MANTL<br />A batteries included end to end solution for your microservices infrastructure.
+		  <div class="more">
+		    <a   href="http://mantl.io/">Read more</a>
+		  </div><!--close more-->        
+	    </div><!--close projects-->
+
 	    <div class="testimonials">
 	      <h3>As Featured in Time</h3>
 		  <p><img style="float: right; padding-left: 1em;"src="time.jpg" />
@@ -63,14 +79,6 @@
 		    <a   href="time">Read more</a>
 		  </div><!--close more-->        
 	    </div><!--close testimonials-->	  
-	    <div class="projects">
-	      <h3>Christmas Spirit</h3>
-		  <p><img style="float: right; padding-left: 1em;"src="mince-pies.jpg" />
-		  We had another fantastic Christmas, thanks to you all for making it magical and keeping the mince pie on the menu!</p>
-		  <div class="more">
-		    <a   href="christmas">Read more</a>
-		  </div><!--close more-->        
-	    </div><!--close projects-->
 	  </div><!--close container-->
 	
 	</div><!--close site_content--> 

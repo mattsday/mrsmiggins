@@ -12,6 +12,7 @@ ADD jquery.min.js /app/jquery.min.js
 ADD style.css /app/style.css
 ADD background.jpg /app/background.jpg
 ADD transparent.png /app/transparent.png
+ADD logo.png /app/logo.png
 
 EXPOSE 80
 WORKDIR /app

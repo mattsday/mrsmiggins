@@ -2,5 +2,5 @@
 Lovingly ripped off from the inbuild hello-world example
 
 ## Folders:
-```docker-image``` - contains the container definition
-```mantl-service``` - service to deploy on MANTL
+* ```docker-image``` - contains the container definition
+* ```mantl-service``` - service to deploy on MANTL
