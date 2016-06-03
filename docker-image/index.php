@@ -24,7 +24,6 @@
             <li class="current"><a href="index.html"  >Home</a></li>
             <li><a href="time"  >Latest News</a></li>
             <li><a href="christmas"  >Seasonal</a></li>
-	    <li><a href="http://private.ukidcv.local/confidential.html"  ><span style="color: red;">Employee R&amp;D Centre</span></a>
           </ul>
         </div><!--close menubar-->	  
 	  </div><!--close banner-->	
@@ -41,12 +40,9 @@
 	 
 	  <div id="content">
         <div class="content_item">
-		  <h1>Miggins R&D Page</h1>
-		  <pre><?php print_r($_ENV); ?></pre>
-		  <p>This is the location you (as permenant memebers of staff) can get a sneak peak into the future of pies!</p>
-		  <p>As a development team we have eaten litteally hundreds of pies to make our customers super happy but shhhhhhh don't share this content with just anyone.</p>
-		  <p>We have been working hard to transform the way our customers will be able to order and customise pies with <strong>Piealicious</strong> our upcoming online customise-to-order pie. We will also be publishing an app!!</p>
-		</div><!--close content_item-->
+		  <h1>Miggins Container Test Page</h1>
+		  <p style="font-size: 1.2em;">Docker host: <?=$_ENV['HOST']?><br />Container ID: <?=$_ENV['HOSTNAME']?></p>
+<!--		 <?php print_r($_ENV); print_r($_REQUEST); print_r($_SERVER); ?>-->
       </div><!--close content-->   
 	  
 	  <div class="container">

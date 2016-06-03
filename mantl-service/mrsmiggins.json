@@ -2,8 +2,9 @@
   "container": {
     "type": "DOCKER",
     "docker": {
+      "forcePullImage": true,
       "network": "BRIDGE",
-      "image": "mattsday/mrsmiggins",
+      "image": "mattsday/mrsmiggins:latest",
       "portMappings": [
         {
           "containerPort": 80,
