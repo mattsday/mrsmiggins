@@ -1,3 +1,4 @@
+#!/bin/sh
 # Marathon servers to use:
 serverlist=(
 	"control.demo.aws.mrsmiggins.net"
