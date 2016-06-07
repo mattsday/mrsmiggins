@@ -9,13 +9,15 @@ serverlist=(
 # Username
 username="admin"
 
+app_name=mrsmiggins-website
+
 # Password (get from input)
 echo 'Enter password:'
 read -sr password
 
 for server in ${serverlist[@]}; do
 	echo "Deleting from $server"
-	output=$(curl -ksu "$username:$password" -X DELETE https://$server:8080/v2/apps/mrsmiggins-matt 2>/dev/null)
+	output=$(curl -ksu "$username:$password" -X DELETE https://$server:8080/v2/apps/$app_name 2>/dev/null)
 	if [[ $output == *"does not exist"* ]]; then
 		echo "Failed - application does not exist"
 	else
