@@ -23,14 +23,15 @@
     <div id="header">
 	  <div id="banner">
 	    <div id="welcome">
-	      <h1>Miggins.net</h1>
+	      <h1>Mrs Miggins Pies</h1>
 	    </div><!--close welcome-->
 	    <div id="menubar">
           <ul id="menu">
             <li class="current"><a href="index.html"  >Home</a></li>
             <li><a href="time"  >Latest News</a></li>
             <li><a href="christmas"  >Seasonal</a></li>
-        <li><a href="http://mantl.io"  >Cisco MANTL</a></li>
+        <li><a href="http://mantl.io"  >Mantl</a></li>
+	<li><a href="https://ciscoshipped.io/">Shipped</a></li>
 
           </ul>
         </div><!--close menubar-->	  
@@ -39,7 +40,13 @@
     
 	<div id="site_content">		
 
-      <div class="slideshow">  
+      <div class="slideshow"> 
+      <div style="position: absolute; left: 55%; top: 12%; z-index: 10000; text-align: center; color: black;">
+      	<h1 style="color: black !important; text-shadow: none !important; font-size: 2.5em;">Cisco Mantl on <?=$cloud?></h1>
+	<p style="font-size: 2em;">Container ID: <?=$_ENV['HOSTNAME']?><br />&nbsp;</p>
+      	<img src="<?=$cloud?>.png"><br />
+<!--	<img src="mantl.png">-->
+</div>
       <ul class="slideshow">
           <li class="show"><img width="900" height="350" src="banner-1.jpg" alt="M.E.C. :: Miggins Employee Connection" /></li>
       </ul>
@@ -65,7 +72,7 @@
 	    <div class="projects">
 	      <h3>Running on <?=$cloud?> (ID: <?=$_ENV['HOSTNAME']?>)</h3>
 		  <p><img style="float: right; padding-left: 1em; width: 50%;"src="logo.png" />
-		  Powered by Cisco MANTL<br />A batteries included end to end solution for your microservices infrastructure.
+		  Powered by Cisco Mantl<br />A batteries included end to end solution for your microservices infrastructure.
 		  <div class="more">
 		    <a   href="http://mantl.io/">Read more</a>
 		  </div><!--close more-->        
