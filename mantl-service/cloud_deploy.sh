@@ -1,12 +1,7 @@
 #!/bin/bash
 # Marathon servers to use:
-serverlist=(
-	"control.demo.aws.mrsmiggins.net"
-	"control.metapod.mrsmiggins.net"
-)
-
-# Username
-username="admin"
+[[ -z $MANTL_SERVER_LIST ]] && echo "You should set MANTL_SERVER_LIST" && exit
+[[ -z $MANTL_USER_NAME ]] && echo "You should set MANTL_USER_NAME" && exit
 
 # App config file
 config_file="mrsmiggins.json"
@@ -16,12 +11,7 @@ echo 'Enter password:'
 read -sr password
 
 
-for server in ${serverlist[@]}; do
+for server in ${MANTL_SERVER_LIST[@]}; do
 	echo "Deploying to $server";
-	output=$(curl -k -X POST -H "Content-Type: application/json" https://$username:$password@$server:8080/v2/apps -d@$config_file 2>/dev/null)
-	if [[ $output == *"already exists"* ]]; then
-		echo "Failed - application already exists"
-	else
-		echo "Done";
-	fi
+	curl -k -X POST -H "Content-Type: application/json" https://$MANTL_USER_NAME:$password@$server:8080/v2/apps -d@$config_file 2>/dev/null
 done
