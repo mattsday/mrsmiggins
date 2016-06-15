@@ -1,6 +1,8 @@
 # Basic Mrs Miggins Website MANTL Service
-Lovingly ripped off from the inbuild hello-world example
+Yes a boring hello world application. Someone had to show one didn't they?
 
 ## Folders:
+
 * ```docker-image``` - contains the container definition
-* ```mantl-service``` - service to deploy on MANTL
+* ```mantl-service``` - service to deploy on Mantl
+
