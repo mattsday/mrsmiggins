@@ -1,7 +1,7 @@
 <?php
 	$cloud = 'AWS';
 
-	if (strpos($_ENV['HOST'], 'Metacloud')) {
+	if (strpos($_ENV['HOST'], 'metacloud')) {
 		$cloud = 'Metacloud';
 	}
 ?>
