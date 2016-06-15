@@ -1,8 +1,8 @@
 <?php
 	$cloud = 'AWS';
 
-	if (strpos($_ENV['HOST'], 'metapod')) {
-		$cloud = 'Metapod';
+	if (strpos($_ENV['HOST'], 'Metacloud')) {
+		$cloud = 'Metacloud';
 	}
 ?>
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.1//EN" "http://www.w3.org/TR/xhtml11/DTD/xhtml11.dtd">

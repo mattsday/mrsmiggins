@@ -12,7 +12,7 @@ ADD images/background.jpg /app/background.jpg
 ADD images/transparent.png /app/transparent.png
 ADD images/logo.png /app/logo.png
 ADD images/AWS.png /app/AWS.png
-ADD images/Metapod.png /app/Metapod.png
+ADD images/Metacloud.png /app/Metapod.png
 
 EXPOSE 80
 WORKDIR /app
