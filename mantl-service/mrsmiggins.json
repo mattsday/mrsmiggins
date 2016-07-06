@@ -16,5 +16,9 @@
   "id": "mrsmiggins-website",
   "instances": 5,
   "cpus": 0.1,
-  "mem": 128
+  "mem": 128,
+  "healthChecks": [{
+       "protocol": "TCP",
+       "portIndex": 0
+   }]
 }
